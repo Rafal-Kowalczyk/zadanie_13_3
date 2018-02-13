@@ -12,6 +12,11 @@ process.stdin.on('readable', function() {
 			case '/vsNode':
 				process.stdout.write('Node version: '+ process.versions.node +'\n');
 				break;	
+			case '/envSystem':	
+				process.stdout.write('System version: '+ process.env.os +'\n');
+				process.stdout.write('Computer name: '+ process.env.computername +'\n');
+				process.stdout.write('System language: '+ process.env.lang +'\n');
+				break;	
 			default:
 			process.stderr.write('Wrong instuction!');
 		};	
